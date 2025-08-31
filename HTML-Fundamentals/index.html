@@ -10,6 +10,7 @@
     <header>
       <h1>📘 The Code Boy</h1>
       <nav>
+        <strong>This is dummy paragraph</strong>
         <a href="./blog.html">Blog</a>
         <a href="#">Dummy Link</a>
         <a href="#">Dummy Link</a>
@@ -17,6 +18,7 @@
       </nav>
     </header>
     <article>
+      <p>This is dummy child</p>
       <header>
         <h2>The Basics Language of the Web: HTML</h2>
         <img
@@ -25,7 +27,9 @@
           width="250"
           alt="HTML Codeon a Screen"
         />
-        <p>Posted by <strong>John Doe</strong>on Monday, June 21st 2030</p>
+        <p id="author">
+          Posted by <strong>John Doe</strong>on Monday, June 21st 2030
+        </p>
 
         <img
           src="./content/laura-jones.jpg"
@@ -89,7 +93,7 @@
     </article>
     <aside>
       <h4>Related posts</h4>
-      <ui>
+      <ul class="related">
         <li>
           <img src="./content/related-1.jpg" height="75" width="75" /><a
             href="#"
@@ -108,8 +112,12 @@
             >How to Learn web development</a
           >
         </li>
-      </ui>
+      </ul>
     </aside>
-    <footer>Copyright &copy; Learn HTML</footer>
+    <footer>
+      <a>Test</a>
+      <!-- here if we use inline then style color then it will be having highest priority -->
+      <p id="copyright" class="copyright text">Copyright &copy; Learn HTML</p>
+    </footer>
   </body>
 </html>
