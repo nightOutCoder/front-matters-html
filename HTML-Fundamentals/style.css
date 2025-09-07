@@ -10,6 +10,7 @@ body {
   color: grey;
   font-size: medium;
   border-top: 10px solid yellow;
+  position: relative;
 }
 
 header {
@@ -18,6 +19,7 @@ header {
   padding: 20px 40px;
   margin-bottom: 20px;
   /* height: 80px; */
+  position: relative;
 }
 
 aside {
@@ -167,4 +169,73 @@ nav {
 .container {
   width: 800px;
   margin: 0 auto;
+}
+
+/* This is for Testing the concept */
+nav a:link {
+  /* background-color: orange;
+  margin: 20px; /*As links are block level element so only left and right margin will be applicable*/
+  /* display: block; */
+
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin: 0;
+}
+/*Just for testing concept*/
+ul li {
+  /* display: inline; */
+}
+
+.lang-img {
+  margin: 100px;
+}
+
+.monkey-like {
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  bottom: 50px;
+  right: 50px;
+}
+
+.smily-like {
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+
+/*Pseudo Element*/
+h1::first-letter {
+  font-style: normal;
+}
+
+h2::first-letter {
+  /* font-size: 80px; */
+}
+
+/* Adjacent */
+h3 + p::first-line {
+  color: red;
+}
+
+h2 {
+  position: relative;
+  background-color: greenyellow;
+}
+
+h2::after {
+  content: "Test";
+  position: absolute;
+  top: -15px;
+  right: -25px;
 }

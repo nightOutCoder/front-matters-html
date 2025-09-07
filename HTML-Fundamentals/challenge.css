@@ -8,8 +8,22 @@ body {
   border: 4px solid black;
   margin: 0 auto;
   width: 815px;
-  margin: 0 auto;
+  margin: 20px auto;
+  position: relative;
 }
+
+.sale {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  background-color: red;
+  position: absolute;
+  top: -32px;
+  left: -24px;
+  letter-spacing: 1px;
+  color: white;
+}
+
 .product-title {
   font-size: 23px;
   text-transform: uppercase;
@@ -28,6 +42,8 @@ body {
 
 .more-info:link {
   color: black;
+  margin-bottom: 30px;
+  display: inline-block;
 }
 
 .more-info:hover {
@@ -61,4 +77,27 @@ body {
   color: black;
   background-color: white;
   border-top: 4px solid black;
+}
+
+.color {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.color-red {
+  background-color: red;
+}
+
+.color-yellow {
+  background-color: purple;
+}
+
+.color-pink {
+  background-color: pink;
+}
+
+.color-blue {
+  background-color: green;
 }
