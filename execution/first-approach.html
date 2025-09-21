@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>List of items : </label>
+    <select id="items">
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+    <ul id="listData"></ul>
+    <script>
+      let records = [];
+      const listElement = document.getElementById("listData");
+      const optionElement = document.getElementById("items");
+
+      async function fetchAll() {
+        try {
+          let data = await fetch("https://fakestoreapi.com/products");
+          let result = await data.json();
+          records = result;
+          displayResult("asc");
+        } catch (e) {
+          console.log(e);
+        }
+      }
+
+      function displayResult(type) {
+        const sortedData = [...records].sort((a, b) => {
+          return type == "asc" ? a.price - b.price : b.price - a.price;
+        });
+
+        listElement.innerHTML = "";
+        sortedData.forEach((product) => {
+          const li = document.createElement("li");
+          li.textContent = `${product.title} : ${product.price}`;
+          listElement.appendChild(li);
+        });
+      }
+
+      optionElement.addEventListener("change", (e) => {
+        displayResult(e.target.value);
+      });
+
+      fetchAll();
+    </script>
+  </body>
+</html>

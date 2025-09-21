@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myform">
+      <label>Name <input type="text" name="name" required /></label>
+      <label>Age <input type="text" name="age" required /></label>
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      const form = document.getElementById("myform");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Don’t do the thing you(Browser) were about to do by default
+        const data = new FormData(form);
+        for (let result of data.entries()) {
+          console.log(result);
+        }
+      });
+    </script>
+  </body>
+</html>
