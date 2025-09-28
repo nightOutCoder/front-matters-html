@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #listData {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .card {
+      background-color: grey;
+      width: 250px;
+      text-align: center;
+      border: 1px solid;
+      width: 250px;
+      height: 80px;
+    }
+  </style>
+  <body>
+    <div id="listData"></div>
+    <script>
+      let records = [];
+      const listElement = document.getElementById("listData");
+      async function fetchAll() {
+        try {
+          let data = await fetch("https://fakestoreapi.com/products");
+          let result = await data.json();
+          records = result;
+          displayResult(records);
+          console.log(records);
+        } catch (e) {
+          console.log(e);
+        }
+      }
+
+      function displayResult(data) {
+        listElement.innerHTML = "";
+        data.forEach((product) => {
+          const divData = document.createElement("div");
+          divData.classList.add("card");
+          divData.innerHTML = `${product.title} : ${product.price}`;
+          listElement.appendChild(divData);
+        });
+      }
+      fetchAll();
+    </script>
+  </body>
+</html>
