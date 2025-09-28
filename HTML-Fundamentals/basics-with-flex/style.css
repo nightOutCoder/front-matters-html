@@ -167,7 +167,7 @@ nav {
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -238,4 +238,82 @@ h2::after {
   position: absolute;
   top: -15px;
   right: -25px;
+}
+
+/****** Floats ******/
+/* .author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  margin-top: 10px;
+  margin-left: 20px;
+  float: left;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+.clearfix::after { */
+/*  psedu element are inline element but clearing floats work only with block*/
+/* clear: both;
+  content: "";
+  display: block;
+}
+
+article {
+  width: 825px;
+  float: left;
+}
+
+aside {
+  width: 300px;
+  float: right;
+}
+
+footer {
+  clear: both;
+} */
+
+/* Flexbox */
+.clearfix {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.authoer-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#author {
+  margin-bottom: 0;
+  margin-left: 16px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  gap: 75px;
+  align-items: flex-start;
+}
+
+aside {
+  flex: 0 0 300px;
+}
+
+article {
+  flex: 1;
 }

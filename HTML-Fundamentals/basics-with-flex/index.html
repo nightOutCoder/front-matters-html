@@ -8,29 +8,35 @@
 
   <body>
     <div class="container">
-      <header>
+      <header class="clearfix">
         <h1><i>📘 The Code Boy</i></h1>
         <nav>
-          <strong>This is dummy paragraph</strong>
+          <!-- <strong>This is dummy paragraph</strong> -->
           <a href="./blog.html">Blog</a>
           <a href="flexbox.html">FlexBoX</a>
           <a href="#">Dummy Link</a>
           <a href="#">Dummy Link</a>
         </nav>
       </header>
+      <div class="row">
       <article>
         <p>This is dummy child</p>
         <header>
           <h2>The Basics Language of the Web: HTML</h2>
-          <img
-            src="./../basics/../content/laura-jones.jpg"
-            alt="Authoer Image"
-            height="50"
-            width="50"
-          />
-          <p id="author">
-            Posted by <strong>John Doe</strong>on Monday, June 21st 2030
-          </p>
+          <div class="authoer-box">
+            <img
+              src="./../basics/../content/laura-jones.jpg"
+              alt="Authoer Image"
+              height="50"
+              width="50"
+              class="author-img"
+            />
+            <p id="author" class="author">
+              <!--For fake text just type Lorem and then Enter -->
+              Posted by <strong>John Doe</strong>on Monday, June 21st 2030
+            </p>
+          </div>
+
           <img
             src="./../basics/../content/post-img.jpg"
             height="100"
@@ -97,29 +103,42 @@
       <aside>
         <h4>Related posts</h4>
         <ul class="related">
-          <li>
+          <li class="related-post">
             <img
               src="./../basics/../content/related-1.jpg"
               height="75"
               width="75"
-            /><a href="#">How to Learn web development</a>
+            />
+            <div>
+              <a href="#" class="related-link">How to Learn web development</a>
+              <p class="related-author">Tony Ram Sam De</p>
+            </div>
           </li>
-          <li>
+          <li class="related-post">
             <img
               src="./../basics/../content/related-2.jpg"
               height="75"
               width="75"
-            /><a href="#">How to Learn web development</a>
-          </li>
+            />
+            <div>
+              <a href="#" class="related-link">How to Learn web development</a>
+              <p class="related-author">Tony Ram Sam De</p>
+            </div>
+          </li class="related-post">
           <li>
             <img
               src="./../basics/../content/related-3.jpg"
               height="75"
               width="75"
-            /><a href="#">How to Learn web development</a>
+            />
+            <div>
+             <a href="#" class="related-link">How to Learn web development</a>
+             <p class="related-author">Tony Ram Sam De</p>
+            </div>
           </li>
         </ul>
       </aside>
+      </div>
       <footer>
         <a>Test</a>
         <!-- here if we use inline then style color then it will be having highest priority -->
