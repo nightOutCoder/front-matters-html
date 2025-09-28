@@ -14,7 +14,6 @@
     }
     .card {
       background-color: grey;
-      width: 250px;
       text-align: center;
       border: 1px solid;
       width: 250px;
@@ -24,6 +23,42 @@
   <body>
     <div id="listData"></div>
     <script>
+      const testProducts = [
+        {
+          id: 101,
+          title:
+            "This is a super long product title meant to test how the card layout handles extremely long text without breaking the design",
+          price: 99.99,
+          image: "https://via.placeholder.com/250x150",
+        },
+        {
+          id: 102,
+          title:
+            "Another incredibly long product name to check truncation and card height consistency across multiple items in the grid",
+          price: 149.99,
+          image: "https://via.placeholder.com/250x150",
+        },
+        {
+          id: 103,
+          title: "Short title",
+          price: 49.99,
+          image: "https://via.placeholder.com/250x150",
+        },
+        {
+          id: 104,
+          title:
+            "Medium length title for testing how flexible the card height is with different text lengths",
+          price: 79.99,
+          image: "https://via.placeholder.com/250x150",
+        },
+        {
+          id: 105,
+          title:
+            "Extremely long title to see if text-overflow, ellipsis, or line-clamp works properly and maintains a neat card layout in the responsive design",
+          price: 199.99,
+          image: "https://via.placeholder.com/250x150",
+        },
+      ];
       let records = [];
       const listElement = document.getElementById("listData");
       async function fetchAll() {
